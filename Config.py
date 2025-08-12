@@ -1,6 +1,6 @@
 import os
 
-ENVIRONMENT = os.environ.get('ENVIRONMENT', False)
+ENVIRONMENT = os.environ.get('ENVIRONMENT', True)
 
 if ENVIRONMENT:
     try:
@@ -17,11 +17,11 @@ if ENVIRONMENT:
         MUST_JOIN = MUST_JOIN.replace("@", "")
 else:
     # Fill the Values
-    API_ID = 0
-    API_HASH = ""
+    API_ID = 29563132
+    API_HASH = "b39be032fc0c567d0cda60dbea99606e"
     BOT_TOKEN = ""
-    DATABASE_URL = ""
+    DATABASE_URL = "mongodb+srv://leazygirl17:sampa9735@cluster0.wpwwz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
-    MUST_JOIN = ""
+    MUST_JOIN = "-1002147914741"
     if MUST_JOIN.startswith("@"):
         MUST_JOIN = MUST_JOIN[1:]
