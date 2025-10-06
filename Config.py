@@ -32,8 +32,8 @@ else:
     DATABASE_URL = "mongodb+srv://leazygirl17:sampa9735@cluster0.wpwwz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     MUST_JOIN = "-1002147914741"
 
-    if DATABASE_URL.startswith("mongodb+srv://"):
-        DATABASE_URL = DATABASE_URL.replace("mongodb+srv://", "mongodb+srv://")
+    if DATABASE_URL.startswith("postgres://"):
+        DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://")
 
     if MUST_JOIN and MUST_JOIN.startswith("@"):
         MUST_JOIN = MUST_JOIN.replace("@", "")
