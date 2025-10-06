@@ -21,7 +21,11 @@ else:
     API_HASH = "b39be032fc0c567d0cda60dbea99606e"
     BOT_TOKEN = ""
     DATABASE_URL = "mongodb+srv://leazygirl17:sampa9735@cluster0.wpwwz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    if DATABASE_URL:
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
+else:
+    raise Exception("❌ DATABASE_URL is not set! Please add it in Render environment variables.")
+
     MUST_JOIN = "-1002147914741"
     if MUST_JOIN.startswith("@creazy_updates_zone"):
         MUST_JOIN = MUST_JOIN[1:]
