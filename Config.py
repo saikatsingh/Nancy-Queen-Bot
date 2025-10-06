@@ -23,5 +23,5 @@ else:
     DATABASE_URL = "mongodb+srv://leazygirl17:sampa9735@cluster0.wpwwz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
     MUST_JOIN = "-1002147914741"
-    if MUST_JOIN.startswith("@"):
+    if MUST_JOIN.startswith("@creazy_updates_zone"):
         MUST_JOIN = MUST_JOIN[1:]
