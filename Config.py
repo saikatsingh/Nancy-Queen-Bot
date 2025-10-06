@@ -10,7 +10,11 @@ if ENVIRONMENT:
     API_HASH = os.environ.get('API_HASH', None)
     BOT_TOKEN = os.environ.get('BOT_TOKEN', None)
     DATABASE_URL = os.environ.get('DATABASE_URL', None)
-    DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")  # Sqlalchemy dropped support for "postgres" name.
+   if DATABASE_URL:
+    DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
+else:
+    raise Exception("❌ DATABASE_URL is not set! Please add it in Render environment variables.")
+
     # https://stackoverflow.com/questions/62688256/sqlalchemy-exc-nosuchmoduleerror-cant-load-plugin-sqlalchemy-dialectspostgre
     MUST_JOIN = os.environ.get('MUST_JOIN', None)
     if MUST_JOIN.startswith("@"):
